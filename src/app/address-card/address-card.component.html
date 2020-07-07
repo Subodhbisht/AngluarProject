@@ -1,0 +1,14 @@
+<p>address-card works!</p>
+<div>
+  <p>user name: {{user.name}}</p>
+  <!-- <button (click)="toggleCollapsed()" name="toggle"> {{isCollapsed ? 'Collapse':'Expand'}} </button> -->
+  <p-button label="{{isCollapsed ? 'Collapse':'Expand'}}" icon="pi pi-check" iconPos="left" (click)="toggleCollapsed()" ></p-button>
+  <div *ngIf="isCollapsed">
+    <p>designation: {{user.designation}}</p>
+    <p>company :  {{user.company}}</p>
+    <div *ngIf="user.phone.length">
+      <p>Phone:</p>
+      <p *ngFor="let phone of user.phone">{{phone}}</p>
+    </div>
+  </div>
+</div>

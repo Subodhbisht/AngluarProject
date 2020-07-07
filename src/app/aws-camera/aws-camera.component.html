@@ -1,0 +1,28 @@
+<p>Camera Details : </p>
+<table style="width:100%">
+    <tr>
+      <th> Name</th>
+      <th>Status</th>
+      <th>Stream Processor</th>
+    </tr>
+    <tr *ngFor="let camera of cameras">
+        <td>{{camera.camera}}</td>
+        <td>{{camera.cameraStatus}}</td>
+        <td>{{camera.streamProcessor}}</td>
+      </tr>
+</table>
+
+<!-- User Name : <input type="text" [(ngModel)]="gitUser" > -->
+<span class="ui-float-label">
+  <input id="float-input" type="text" size="30" [(ngModel)]="gitUser" pInputText> 
+  <label for="float-input">Username</label>
+</span>
+<p-button label="Searcch" icon="pi pi-check" iconPos="left" (click)="search()" ></p-button>
+<div *ngIf="response" >
+  <p>Login name : {{response.login}}</p>
+  <img src="{{response.avatar_url}}" alt="Girl in a jacket" width="500" height="600">
+  <p>Login name : {{response.type}}</p>
+  <p>Login name : {{response.id}}</p>
+  <p>Login name : {{response.url}}</p>
+
+</div>
